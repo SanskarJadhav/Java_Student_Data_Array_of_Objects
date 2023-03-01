@@ -6,6 +6,7 @@ public class Main {
 		// creating object for Database class in a uses-a-relationship
 		Database db = new Database();
 		int r;
+		// do while loop: runs program until condition is no longer satisfied
 		do {
 			System.out.println("\nMENU\n==== ");
 			System.out.println("1. Add students");
@@ -14,9 +15,11 @@ public class Main {
 			System.out.println("4. Update a value for a student");		
 			System.out.println("5. Delete a student");
 			int choice = scan.nextInt();
+			// applying a switch case for each operation
 			switch(choice){
 				case 1:
 					int j;
+					// do while loop to keep adding students until user wants to stop
 					do {
 						db.addStudent();
 						System.out.println("Would you like to add another student?  Yes - 1, No - 0  ");;
@@ -31,6 +34,7 @@ public class Main {
 					System.out.println("Search by name/prn/position: ");
 					String npp = scan.next();
 					int found = 0;
+					// selecting which method to call based on feature selected by user
 					if(npp.equals("name")) {
 						db.searchByName();
 					} else if(npp.equals("prn")) {
