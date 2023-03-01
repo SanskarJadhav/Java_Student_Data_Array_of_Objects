@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-	public static void main(String[] args) throws NullPointerException {
+	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		// creating object for Database class in a uses-a-relationship
 		Database db = new Database();
