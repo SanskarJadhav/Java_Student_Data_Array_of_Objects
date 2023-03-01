@@ -1,8 +1,10 @@
 public class Student {
+	// declaring private variables
 	private String name, dob;
 	private long prn;
 	private int marks;
-
+	
+	// using getter and setter methods for instance variables
 	public void setName(String n) {
 		this.name = n;
 	}
