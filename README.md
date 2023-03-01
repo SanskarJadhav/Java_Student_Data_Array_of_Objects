@@ -1,2 +1,7 @@
 # Java_Student_Data_Array_of_Objects
-PIJ Lab Assignment 3
+The following java program consists of four classes: Main, Student, InputOutput, and Database.
+
+The Main class acts as a user interface, where the user can
+- see a menu displaying all operations that can be done
+- select one operation to perform
+- choose to run the program again
