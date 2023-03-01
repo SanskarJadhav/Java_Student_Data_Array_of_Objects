@@ -4,7 +4,7 @@ public class InputOutput {
 	String name, dob;
 	long prn;
 	int marks;
-	Object[] array = new Object[4];
+	Object[] obj = new Object[4];
 	public Object[] enterStudentData() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter name of the student: ");
@@ -15,11 +15,11 @@ public class InputOutput {
 		dob = sc.next();
 		System.out.println("Enter marks of the student: ");
 		marks = sc.nextInt();
-		array[0] = name;
-		array[1] = prn;
-		array[2] = dob;
-		array[3] = marks;
-		return array;
+		obj[0] = name;
+		obj[1] = prn;
+		obj[2] = dob;
+		obj[3] = marks;
+		return obj;
 	}
 	public void printStudentData(Student s) {
 		System.out.println("Name:\t" + s.getName());
