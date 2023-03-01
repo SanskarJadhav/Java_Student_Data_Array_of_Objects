@@ -8,6 +8,7 @@ public class Database {
 	InputOutput io = new InputOutput();
 	Scanner scan = new Scanner(System.in);
 	int found;
+	// method to add a student
 	public void addStudent() {
 		Object[] input = io.enterStudentData();
 		// creating object for Student class in a uses-a-relationship
@@ -18,12 +19,14 @@ public class Database {
 		s.setMarks((int)input[3]);
 		students.add(s);
 	}
+	// method to display all students
 	public void displayStudents() {
 		for (Student i: students) {
 			io.printStudentData(i);
 			System.out.println();
 		}
 	}
+	// method to search for a student by name
 	public void searchByName() {
 		found = 0;
 		System.out.println("Enter name: ");
@@ -36,8 +39,10 @@ public class Database {
 				break;
 			}
 		}
+		// name isn't stored in the database
 		if(found==0) System.out.println("Name does not exist in the database.");
 	}
+	// method to search for a student by PRN
 	public void searchByPrn() {
 		System.out.println("Enter PRN: ");
 		long prn = scan.nextLong();
@@ -49,8 +54,10 @@ public class Database {
 				break;
 			}
 		}
+		// PRN isn't stored in the database
 		if(found==0) System.out.println("PRN does not exist in the database.");
 	}
+	// method to search for a student by position in the database (1,2,3,...)
 	public void searchByPosition() {
 		System.out.println("Enter position in database: ");
 		int position = scan.nextInt();
@@ -58,15 +65,18 @@ public class Database {
 			System.out.println("Student Found");
 			io.printStudentData(students.get(position-1));
 		} else {
+			// database size is smaller than position given
 			System.out.println("Position is beyond database size");
 		}
 	}
+	// method to update a value for a specific student
 	public void updateStudentData() {
 		System.out.println("Enter the name of the student: ");
 		String name = scan.next();
 		found = 0;
 		for(Student i: students) {
 			if(i.getName().equals(name)) {
+				// user selects which feature to change
 				System.out.println("Which value would you like to change: name/prn/dob/marks?  ");
 				String str = scan.next();
 				if(str.equals("name")) {
@@ -96,8 +106,10 @@ public class Database {
 				break;
 			}
 		}
+		// if student is not in database
 		if (found==0) System.out.println("Name does not exist in the database.");
 	}
+	// method to delete data for a student
 	public void deleteStudent() {
 		System.out.println("Enter the name of the student to be deleted: ");
 		String delname = scan.next();
@@ -110,6 +122,7 @@ public class Database {
 				break;
 			}
 		}
+		// if student is not in database
 		if (found==0) System.out.println("Name does not exist in the database.");
 	}
 }
