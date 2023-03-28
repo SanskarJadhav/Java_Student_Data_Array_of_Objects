@@ -15,6 +15,7 @@ The Student class defines the following private variables:
 - long prn
 - String dob
 - int marks
+
 It makes use of the setter and getter methods to store and retrieve values respectively. These methods are namely:
 - setName(String n), setPrn(long prn), setDob(String dob), setMarks(int marks): setter methods
 - getName(), getPrn(), getDob(), getMarks(): getter methods
